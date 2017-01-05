@@ -14,6 +14,7 @@ Supervisors:     Prof. Lakshmi Subramanian, Fatima Zarinni, Shiva Radhakrishnan
 #### Contact
 
 You can contact the authors by email at [wz927@nyu.edu](mailto:info@wz927.nyu.edu).
+Or Joe Zuhusky at [jzuhusky@nyu.edu](mailto:jrz263@nyu.edu).
 
 ### Usage
 1. Package server folder as a jar (you can use IntelliJ)
