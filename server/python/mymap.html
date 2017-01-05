@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<style type="text/css">
+  #legend {
+  background: #FFF;
+  padding: 10px;
+  margin: 5px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.color {
+  border: 1px solid;
+  height: 12px;
+  width: 12px;
+  margin-right: 3px;
+  float: left;
+}
+
+.c1 {
+  background: #334FFF
+}
+
+.c2 {
+  background: #3393FF
+}
+
+.c3 {
+  background: #33D4FF
+}
+
+.c4 {
+  background: #33FFF0
+}
+
+.c5 {
+  background: #33FFA5
+}
+
+.c6 {
+  background: #71FF33
+}
+
+.c7 {
+  background: #C7FF33
+}
+
+.c8 {
+  background: #FFFC33
+}
+
+.c9 {
+  background: #FFDA33
+}
+
+.c10 {
+  background: #FFAC33
+}
+
+.c11 {
+  background: #FF8333
+}
+
+.c12 {
+  background: #FF6E33
+}
+
+.c13 {
+  background: #FF3933
+}
+
+</style><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(40.723397, -74.034740);
+		var myOptions = {
+			zoom: 14,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+var myLatLng = {lat: 40.723397, lng: -74.034740};
+var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|33D4FF");
+var marker = new google.maps.Marker({
+	position: myLatLng,
+	map: map,
+title: "354891060547506: 20.92",
+icon: pinImage
+});
+marker.setMap(map);
+
+var legend = document.createElement("div");
+legend.id = "legend";
+var content = [];
+content.push("<h3>Legend</h3>");
+content.push('<p><div class="color c1"></div>0 dB</p>');
+content.push('<p><div class="color c2"></div>10 dB</p>');
+content.push('<p><div class="color c3"></div>20 dB</p>');
+content.push('<p><div class="color c4"></div>30 dB</p>');
+content.push('<p><div class="color c5"></div>40 dB</p>');
+content.push('<p><div class="color c6"></div>50 dB</p>');
+content.push('<p><div class="color c7"></div>60 dB</p>');
+content.push('<p><div class="color c8"></div>70 dB</p>');
+content.push('<p><div class="color c9"></div>80 dB</p>');
+content.push('<p><div class="color c10"></div>90 dB</p>');
+content.push('<p><div class="color c11"></div>100 dB</p>');
+content.push('<p><div class="color c12"></div>110 dB</p>');
+content.push('<p><div class="color c13"></div>120 dB</p>');
+legend.innerHTML = content.join('');
+legend.index = 1;
+map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
